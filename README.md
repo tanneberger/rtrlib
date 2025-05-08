@@ -10,9 +10,10 @@ Introduction
 ------------
 The RTRlib implements the client-side of the RPKI-RTR protocol 
 ([RFC 6810](https://tools.ietf.org/html/rfc6810)), 
-([RFC 8210](https://tools.ietf.org/html/rfc8210)) and BGP Prefix Origin
-Validation ([RFC 6811](https://tools.ietf.org/html/rfc6811)). This also enables
-the maintenance of router keys. Router keys are required to deploy BGPSEC.
+([RFC 8210](https://tools.ietf.org/html/rfc8210)), BGP Prefix Origin
+Validation ([RFC 6811](https://tools.ietf.org/html/rfc6811)), and ASPA-based Route Leak 
+detection ([Rev. 18](https://datatracker.ietf.org/doc/draft-ietf-sidrops-aspa-verification/)). 
+This also enables the maintenance of router keys. Router keys are required to deploy BGPSEC.
 
 The software was successfully tested on Linux and FreeBSD.
 
@@ -129,8 +130,8 @@ RTR-Server using the rtrclient command line tool:
 
     bin/rtrclient tcp rpki-validator.realmv6.org 8282
 
-`rpki-validator.realmv6.org` is an open RTR-Server instance for testing
-purposes, which runs the RIPE Validator. It listens on port 8282 and
+`rpki-cache.netd.cs.tu-dresden.de` is an open RTR-Server instance for testing
+purposes, which runs the RIPE Validator. It listens on port 3323 and
 validates ROAs from the following trust anchors: AfriNIC, APNIC, ARIN,
 LACNIC, RIPE.
 
